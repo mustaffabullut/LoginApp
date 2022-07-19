@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginApp.LoginUI">
+    <ContentPage.Content>
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                
+            <Image Source="ada-yazilim-logo.png" WidthRequest="100" HeightRequest="100"></Image>
+            
+            <Entry x:Name="KullaniciAdi" Placeholder="Kullanıcı Adı" TextColor="White" PlaceholderColor="Black"></Entry>
+            <Entry x:Name="Parola" Placeholder="Parola" IsPassword="True" TextColor="White" PlaceholderColor="Black"></Entry>
+            <Button VerticalOptions="Center"
+                    Text="Giriş"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Clicked="Button_Clicked"
+                    ></Button>
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                    <Span Text="Hesabınız yok mu ?" TextColor="Red"/>
+                    <Span Text="Kaydol " TextColor="Green" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                    
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+                
+            </Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
